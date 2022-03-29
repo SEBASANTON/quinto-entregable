@@ -1,0 +1,87 @@
+.welcome{
+    margin: 5rem 0;
+}
+.welcome>h1{
+    margin-top: rem;
+    margin: 0 1rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.welcome>h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    margin: 0.5rem 1rem;
+    margin-bottom: -0.5rem;
+
+}
+.welcome>img{
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.welcome-form>input{
+    width: 255px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 8px 4px rgb(153, 153, 153);
+    border: 2px solid black;
+    margin-right: -2.5rem;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    padding-right: 2rem;
+    outline: none;
+}
+.welcome-form>button{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #3ae010;
+    border: 2px solid black;
+    background-color: black;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+
+.img-welcome{
+    max-width: 220px;
+    position: fixed;
+    filter: opacity(0.4) drop-shadow(0 0 0 rgb(134, 133, 133));
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    left: 60vw;
+    top: -20px;
+    z-index: -1;
+}
+.img-welcomeLogin{
+    max-width: 130px;
+    position: fixed;
+    filter: opacity(0.4) drop-shadow(0 0 0 rgb(134, 133, 133));
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    left: 70vw;
+    top: -22px;
+}
+@media (min-width:500px){
+    .welcome>img{
+        width: 400px;
+    }
+    .img-welcome{
+        max-width: 400px;
+        left: 75vw;
+        top: -40px;
+    }
+    .img-welcomeLogin{
+        max-width: 400px;
+        left: 75vw;
+        top: -40px;
+    }
+    
+}
+ 

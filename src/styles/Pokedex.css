@@ -1,0 +1,100 @@
+.pokedex>h1{
+    text-align: left;
+    margin: 1rem 2rem;
+    font-family: 'Kanit', sans-serif;
+    font-size: 35px;
+}
+.pokedex>p{
+    margin: 0 3rem;
+    font-size: 20px;
+    text-align: justify;
+}
+.input-container>input{
+    border-radius: 20px;
+    height: 30px;
+    padding: 1rem;
+    padding-right: 2rem;
+    border: transparent;
+    box-shadow: 3px 5px 8px 4px rgb(153, 153, 153);
+    margin: 1rem 0;
+    color: rgb(85, 85, 84);
+
+}
+.input-container>button{
+    height: 30px;
+    width: 25px;
+    margin-left: -2rem;
+    border: transparent;
+    border-radius: 20px;
+    background-color: white;
+    color: rgb(85, 85, 84);
+}
+
+.options{
+    border-radius: 20px;
+    height: 30px;
+    width: 120px;
+    padding: 0 5px;
+    box-shadow: 3px 5px 8px 4px rgb(153, 153, 153);
+    text-align: center;
+    color:black;
+    border: transparent;
+    color: rgb(85, 85, 84);
+    margin: 1rem;
+    cursor: pointer
+
+
+}
+.Card-responsive{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 1rem;
+}
+.responsive-buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.responsive-buttons>button{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    margin: 1rem 0.3rem;
+    border:transparent;
+    background-color: rgb(228, 94, 17);
+    font-size: 18px;
+    color: white;
+}
+
+.responsive-buttons>button:disabled{
+    display: none;
+}
+
+@media (min-width:1000px){
+    .pokedex>h1{
+        margin-left: 6rem ;
+    }
+
+    .pokedex>p{
+        margin-left: 10rem;
+    }
+    .Card-responsive{
+        margin: 0 3rem;
+    }
+    .responsive-buttons>button{
+        width: 35px;
+        color: black;
+        height: 35px;
+        border-radius: 10px;
+        margin: 1rem 0.3rem;
+        border:transparent;
+        background-color: white;
+        font-size: 16px;
+    }
+    .responsive-buttons>button:hover{
+        background-color: rgb(228, 94, 17);
+        font-size: 18px;
+        color: white;
+    }
+}

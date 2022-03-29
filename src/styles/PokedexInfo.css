@@ -1,0 +1,229 @@
+.poke-info>img{
+    margin: 1rem;
+    width: 270px;
+}
+.one-info{
+    background-color: white;
+    margin: 4rem auto ;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    width: 90vw;
+    max-width: 800px;
+    position: relative;
+}
+.one-info>img{
+    width: 240px;
+    margin-top: -7.5rem;
+}
+.responsive-paragraph{
+    display: flex;
+    justify-content: space-around;
+    color: rgb(123, 124, 124);
+}
+.responsive-paragraph>p>b{
+    color: black;
+    font-size: 22px;
+}
+.one-info>h1{
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+.one-info>hr{
+    margin:  0.5rem 1.5rem;
+}
+.responsive-types{
+    display: flex;
+    justify-content: space-around;
+}
+.responsive-types>p{
+    background-color: rgb(31, 124, 128);
+    margin: 1rem;
+    padding: 0.4rem 0.2rem;
+    width: 130px;
+    max-width: 200px;
+    color: white;
+    border-radius: 5px;
+    
+}
+.type{
+    background-color: rgb(255, 255, 255);
+    margin: 1rem ;
+    width: 350px;
+    max-width: 350px;
+    position: relative;
+
+}
+.responsive-abilities{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.responsive-abilities>p{
+    padding: 0.4rem 0.2rem ;
+    width: 130px;
+    max-width: 200px;
+    color: white;
+    background-color: rgb(13, 75, 54);
+    margin: 1rem;
+    border-radius: 5px;
+    margin-bottom:0rem ;
+}
+.abilities{
+    background-color: rgb(255, 255, 255);
+    margin: 1rem ;
+    padding-bottom: 1.2rem ;
+    padding-top: 0.5rem;
+    width: 350px;
+    max-width: 350px;
+    position: relative;
+
+}
+.progress-bar{
+    background-color: rgb(245, 231, 212);
+    height: 25px;
+    width: 70vw;
+    max-width: 500px;
+    margin: 1rem auto;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 0px rgb(128, 128, 128);   
+    position: relative;
+
+}
+
+.content{
+    height: 25px;
+    border-radius: 7px;
+    text-align: right;
+    padding-right: 0.5rem;
+    color: white;
+    animation: animate-shine 2.5s ease-out infinite;
+    background-image: linear-gradient(to bottom, #e66807, #e0af0f);
+
+}
+
+@keyframes animate-shine { 
+    0%{opacity: 0.2; width: 0; }
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+
+.responsive-stats>p{
+    text-align: justify;
+    margin: 0 12vw ;
+}
+.stats-base{
+    background-color: rgb(255, 255, 255);
+    margin: 1rem auto;
+    padding: 1rem 0;
+    width: 90vw;
+    max-width: 800px;
+    position: relative;
+
+}
+.movements{
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 90vw;
+    max-width: 800px;
+    position: relative;
+}
+.responsive-movements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.responsive-movements>p{
+    background-color: #cec7b1;
+    margin: 0.5rem;
+    width: 120px;
+    padding: 0.1rem 0.3rem;
+    border-radius: 5px;
+}
+.responsive-typesAbilities{
+    margin: 0 1.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img-welcomeInfo{
+    max-width: 130px;
+    position: fixed;
+    filter: opacity(0.4) drop-shadow(0 0 0 rgb(134, 133, 133));
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    left: 70vw;
+    top: -22px;
+    z-index: 0;
+
+}
+.pokeInfo{
+    z-index: -2;
+    opacity: 10;
+}
+@media (min-width:1000px){
+
+    .resposive-info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .first-info{
+        width: 60vw;
+    }
+    .one-info{
+        width: 60vw;
+    }
+    .movements{
+        width: 20vw;
+        margin: 1rem 1rem;
+        margin-top: 4rem;
+    }
+    .type{
+        width: 25vw;
+        margin: auto;
+        padding: 0.4rem 0;
+        max-height: 170px;
+    }
+    .abilities{
+        width: 33vw;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .stats-base{
+        width: 60vw;
+    }
+    .responsive-typesAbilities{
+        flex-wrap: nowrap;
+        margin: 0;
+
+    }
+    .responsive-abilities>p{
+        padding: 0.4rem 0.1rem ;
+        width: 110px;
+        margin: 0.5rem;
+
+    }
+    .poke-info>img{
+        
+        margin-left: -60vw;
+        margin-bottom: -3.5vw;
+        width: 270px;
+        margin-top: 5rem;
+
+    }
+
+}
+@media (min-width:500px){
+
+.img-welcomeInfo{
+    max-width: 400px;
+    left: 75vw;
+    top: -40px;
+}
+}
