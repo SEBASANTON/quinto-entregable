@@ -21,10 +21,9 @@ const PokedexInfo = () => {
     },[id]);
     
     const [pokeColor, setPokeColor ] = useState('white');
-
+    const type = pokemon?.types?.[0]?.type?.name;
     useEffect(() =>{
-        
-        switch(pokemon?.types?.[0]?.type?.name){
+        switch(type){
             case "grass":
                 setPokeColor('#02AC66');
                 break 
@@ -83,7 +82,8 @@ const PokedexInfo = () => {
                 setPokeColor("");
                 break
         }
-    },[pokemon?.types?.[0]?.type?.name])
+    },[type])
+
     return (
         <div style={{backgroundColor:pokeColor}} className="pokeInfo">
             <img className="img-welcomeInfo" src={fondo} alt="" />
@@ -106,7 +106,7 @@ const PokedexInfo = () => {
             <div className="type">
                 <h2>Type</h2>
                     {
-                        pokemon.types?.length == 1 
+                        pokemon.types?.length === 1 
                             ?
                                 <div className="responsive-types">
                                     <p>{pokemon.types?.[0]?.type?.name}</p>
@@ -121,12 +121,12 @@ const PokedexInfo = () => {
             <div className="abilities">
                 <h2>Abilities</h2>
                     {
-                        pokemon.abilities?.length == 1 ?(
+                        pokemon.abilities?.length === 1 ?(
                             <div className="responsive-abilities">
                                     <p>{pokemon.abilities?.[0].ability.name}</p>
                             </div>
                         )
-                        : pokemon.abilities?.length == 2 ? (
+                        : pokemon.abilities?.length === 2 ? (
                             <div className="responsive-abilities">
                             <p>{pokemon.abilities?.[0].ability.name}</p>
                             <p>{pokemon.abilities?.[1].ability.name}</p> 

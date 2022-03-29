@@ -17,10 +17,9 @@ const PokedexCard = ({pokemonUrl}) => {
     },[pokemonUrl])
 
     const [pokeColor, setPokeColor ] = useState('white');
-
+    const type = pokemon?.types?.[0]?.type?.name;
     useEffect(() =>{
-        
-        switch(pokemon?.types?.[0]?.type?.name){
+        switch(type){
             case "grass":
                 setPokeColor('#02AC66');
                 break 
@@ -79,7 +78,7 @@ const PokedexCard = ({pokemonUrl}) => {
                 setPokeColor("");
                 break
         }
-    },[pokemon?.types?.[0]?.type?.name])
+    },[type])
 
 
     return (
@@ -91,7 +90,7 @@ const PokedexCard = ({pokemonUrl}) => {
             <hr />
             <p>
                 {
-                    pokemon.types?.length == 1 ?
+                    pokemon.types?.length === 1 ?
                     pokemon.types?.[0]?.type?.name :
                     `${pokemon.types?.[0]?.type?.name} / ${pokemon.types?.[1]?.type?.name}`
                 }

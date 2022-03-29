@@ -17,15 +17,13 @@ const Pokedex = () => {
 
     //https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126
     useEffect(() =>{
-        axios.get('https://pokeapi.co/api/v2/pokemon/')
+        axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=160/')
             .then(res => {
                 setPokemons(res.data.results)
-                /* console.log(res.data.results) */
             });
         axios.get(`https://pokeapi.co/api/v2/type/`)
             .then(res => {
                 setTypes(res.data.results)
-                console.log(res.data .results)
             })
     },[]);
 
@@ -35,11 +33,9 @@ const Pokedex = () => {
     }
 
     const handleType = e =>{
-        console.log(e.target.value)
         axios.get(e.target.value)
             .then(res =>{
                 setPokemons(res.data.pokemon) 
-                console.log(res.data.pokemon)
             })  
     }
 
