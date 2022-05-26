@@ -1,9 +1,11 @@
+
 .pokedex>h1{
     text-align: left;
     margin: 1rem 2rem;
     font-family: 'Kanit', sans-serif;
     font-size: 35px;
 }
+
 .pokedex>p{
     margin: 0 3rem;
     font-size: 20px;
@@ -18,7 +20,6 @@
     box-shadow: 3px 5px 8px 4px rgb(153, 153, 153);
     margin: 1rem 0;
     color: rgb(85, 85, 84);
-
 }
 .input-container>button{
     height: 30px;
@@ -70,6 +71,29 @@
 .responsive-buttons>button:disabled{
     display: none;
 }
+.img-config{
+    width: 50px;
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    position: fixed;
+    right: 10px;
+    bottom: 90px;
+}
+.img-config:hover{
+    width: 55px;
+}
+
+.img-output{
+    width: 45px;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+}
+.img-output:hover{
+    width: 50px;
+}
 
 @media (min-width:1000px){
     .pokedex>h1{
@@ -97,4 +121,5 @@
         font-size: 18px;
         color: white;
     }
+    
 }

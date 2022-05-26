@@ -4,6 +4,7 @@ import{
   Route
 } from 'react-router-dom';
 import './App.css';
+import Config from './components/Config';
 import Login from './components/Login';
 import Pokedex from './components/Pokedex';
 import PokedexInfo from './components/PokedexInfo';
@@ -23,6 +24,7 @@ function App() {
           <Route element={<ProtectedRoutes/>}>
             <Route path="/pokedex" element={<Pokedex/>}/>
             <Route path="/pokedex/:id" element={<PokedexInfo/>}/>
+            <Route path="/pokedex/config" element={<Config/>}/>
           </Route>
 
         </Routes>

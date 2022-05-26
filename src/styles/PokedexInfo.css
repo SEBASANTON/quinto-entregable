@@ -159,12 +159,33 @@
     left: 70vw;
     top: -22px;
     z-index: 0;
-
 }
 .pokeInfo{
     z-index: -2;
     opacity: 10;
+    padding-top: 2rem;
 }
+
+.back-pokeball{
+    display: block;
+    margin-left: 4vw;
+    width: 2rem;
+    margin-bottom: -2rem;
+    font-size: 25px;
+    color: black;
+}
+@media (min-width:500px){
+
+    .img-welcomeInfo{
+        max-width: 400px;
+        left: 75vw;
+        top: -40px;
+    }
+    .back-pokeball{
+        margin-left: 6vw;
+    }
+    }
+
 @media (min-width:1000px){
 
     .resposive-info{
@@ -217,13 +238,8 @@
         margin-top: 5rem;
 
     }
+    .back-pokeball{
+        margin-left: 9vw;
+    }
 
-}
-@media (min-width:500px){
-
-.img-welcomeInfo{
-    max-width: 400px;
-    left: 75vw;
-    top: -40px;
-}
 }

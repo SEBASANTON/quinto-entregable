@@ -1,10 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PokedexCard from './PokedexCard';
 import '../styles/Pokedex.css'
 import fondo from '../assets/pokebola.png'
+import config from '../assets/configuraciones.png'
+import output from '../assets/cerrar-sesion.png'
 
 const Pokedex = () => {
 
@@ -61,7 +63,6 @@ const Pokedex = () => {
 
             <div className="select">
                 <select onChange={handleType} className="options" >
-
                     {
                         types.map(type => (
                             <option key={type.url} value={type.url}>
@@ -93,6 +94,19 @@ const Pokedex = () => {
                     ))
                 }
             </div>
+
+            <div>
+                <Link to={'/'}>
+                    <img src={output} className="img-output" alt="" />
+                </Link>
+            </div>
+            
+            <div>
+                <Link to={'/pokedex/config'}>
+                    <img src={config} className="img-config" alt="" />
+                </Link>
+            </div>
+
             <div className="responsive-buttons">
             <button 
                 onClick={() =>setPage(page-1)}
