@@ -3,6 +3,13 @@
     margin: 0rem 13vw;
     margin-top: 2rem;
 }
+
+.config-body{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 .back>i{
     font-size: 25px;
     object-fit: left;
@@ -24,8 +31,8 @@
     height: 9rem;
     border-radius: 10px;
     text-align: center;
-    background-color: rgb(233, 220, 203);
-
+    background-color: rgb(240, 230, 209);
+    position: relative;
 }
 .theme>h1{
     text-align: left;
@@ -37,14 +44,13 @@
     padding: 0.5rem 1.5rem;
     height: 10.7rem;
     border-radius: 10px;
-    background-color: rgb(233, 220, 203);
-
+    background-color: rgb(245, 231, 206);
+    position: relative;
 }
 
 .switch{
     position: relative;
     display: inline-block;
-    text-align: center;
     width: 60px;
     height: 30px;
     margin: 0 1rem;
@@ -64,7 +70,7 @@
     right: 0;
     bottom: 0;
 
-    background-color: rgb(138, 145, 153);
+    background-color: rgb(199, 152, 22);
     transition: 0.4s;
     border-radius: 30px;
 }
@@ -80,7 +86,7 @@
     border-radius: 50%;
 }
 input:checked + .slider{
-    background-color: rgb(23, 23, 117);
+    background-color: rgb(35, 35, 107);
 }
 
 input:checked + .slider:before{
@@ -89,4 +95,30 @@ input:checked + .slider:before{
 .select-page{
     text-align: center;
     margin-top: 1rem;
+}
+
+/* MODO OSCURO */
+
+.open{
+    background-color: rgb(35, 36, 36);
+    color: white;
+}
+.open>.config>.back>i{
+    color: white;
+}
+.open .items-page{
+    background-color: rgb(61, 61, 61);
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22);
+
+}
+.open .theme{
+    background-color: rgb(61, 61, 61);
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22);
+
+}
+.open>.config>.items-page>.select-page>.options{
+    background-color: rgb(51, 51, 51);
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22);
+    color: white;
+
 }

@@ -6,13 +6,11 @@ import '../styles/PokedexCard.css'
 const PokedexCard = ({pokemonUrl}) => {
 
     const [ pokemon, setPokemon ] = useState({});
-/*     console.log(pokemonUrl)
- */
+
     useEffect(() => {
         axios.get(pokemonUrl)
             .then((res) =>{
                 setPokemon(res.data)
-                console.log(res.data)
             })
     },[pokemonUrl])
 

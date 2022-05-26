@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import letras from "../assets/letras2.png";
 import "../styles/PokedexInfo.css";
 import fondo from "../assets/pokebola.png";
+import { useSelector } from "react-redux";
 
 const PokedexInfo = () => {
   const { id } = useParams();
@@ -14,7 +15,6 @@ const PokedexInfo = () => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).then((res) => {
       setPokemon(res.data);
       setPokeMoves(res.data.moves);
-      console.log(res.data);
     });
   }, [id]);
 
@@ -59,7 +59,7 @@ const PokedexInfo = () => {
         setPokeColor("#1479FB");
         break;
       case "electric":
-        setPokeColor("#FFFF33");
+        setPokeColor("#e0af0f");
         break;
       case "psychic":
         setPokeColor("#009999");
@@ -82,15 +82,17 @@ const PokedexInfo = () => {
     }
   }, [type]);
 
+  const theme = useSelector((state) => state.theme);
+
+
   return (
     <div style={{ backgroundColor: pokeColor }} className="pokeInfo">
       <img className="img-welcomeInfo" src={fondo} alt="" />
 
-
-      <div className="poke-info">
-      <Link to={"/pokedex"} className="back-pokeball">
-        <i className="fa-solid fa-arrow-left"></i>
-      </Link>
+      <div className={`poke-info ${theme ? "dark" : ""} `}>
+        <Link to={"/pokedex"} className="back-pokeball">
+          <i className="fa-solid fa-arrow-left"></i>
+        </Link>
         <img src={letras} alt="" />
         <div className="resposive-info">
           <div className="first-info">

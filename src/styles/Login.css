@@ -55,7 +55,7 @@
     transform-origin: 50% 50%;
     left: 60vw;
     top: -20px;
-    z-index: -1;
+    z-index: 0;
 }
 .img-welcomeLogin{
     max-width: 130px;

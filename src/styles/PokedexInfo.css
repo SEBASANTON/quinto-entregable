@@ -1,6 +1,8 @@
 .poke-info>img{
     margin: 1rem;
     width: 270px;
+    z-index: 2;
+    position:relative;
 }
 .one-info{
     background-color: white;
@@ -64,7 +66,7 @@
     width: 130px;
     max-width: 200px;
     color: white;
-    background-color: rgb(13, 75, 54);
+    background-color: rgb(25, 97, 73);
     margin: 1rem;
     border-radius: 5px;
     margin-bottom:0rem ;
@@ -149,19 +151,18 @@
     justify-content: center;
 }
 .img-welcomeInfo{
-    max-width: 130px;
+    max-width: 220px;
     position: fixed;
     filter: opacity(0.4) drop-shadow(0 0 0 rgb(134, 133, 133));
     -webkit-animation: 3s rotate linear infinite;
     animation: 3s rotate linear infinite;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    left: 70vw;
-    top: -22px;
+    left: 60vw;
+    top: -20px;
     z-index: 0;
 }
 .pokeInfo{
-    z-index: -2;
     opacity: 10;
     padding-top: 2rem;
 }
@@ -174,6 +175,59 @@
     font-size: 25px;
     color: black;
 }
+
+/*-------MODO OSCURO--------------*/
+
+.dark>.resposive-info>.first-info>.one-info{
+    background-color: rgb(27, 27, 27);
+    box-shadow: 3px 5px 8px 4px rgb(36, 36, 36, 0.5);
+    color: white;
+}
+
+.dark>.resposive-info>.first-info>.one-info>.responsive-paragraph>p{
+    color: rgb(185, 185, 185);
+}
+.dark>.resposive-info>.first-info>.one-info>.responsive-paragraph>p>b{
+    color: white;
+}
+.dark>.resposive-info>.first-info>.one-info>hr{
+    box-shadow: 3px 5px 8px 4px rgba(22, 22, 22, 0.37);
+    background-color: white;
+}
+
+
+.dark>.resposive-info>.first-info>.responsive-typesAbilities>.type{
+    background-color: rgb(40, 45, 45);
+
+    box-shadow: 3px 5px 8px 4px rgba(22, 22, 22, 0.5);
+    color: white;
+}
+.dark>.resposive-info>.first-info>.responsive-typesAbilities>.abilities{
+    background-color: rgb(40, 45, 45);
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22, 0.5);
+    color: white;
+}
+.dark>.resposive-info>.first-info>.stats-base{
+    background-color: rgb(40, 45, 45);
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22, 0.5);
+    color: white;
+}
+.dark>.resposive-info>.first-info>.stats-base>.responsive-stats>.progress-bar{
+    background-color: rgba(110, 110, 110, 0.473);
+    box-shadow: 3px 5px 8px 4px rgba(0, 0, 0, 0.315);
+    color: white;
+}
+.dark>.resposive-info>.last-info>.movements{
+    background-color: rgb(40, 45, 45);
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22, 0.5);
+    color: white;
+}
+.dark>.resposive-info>.last-info>.movements>.responsive-movements>p{
+    background-color: rgba(110, 110, 110, 0.473);
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22, 0.5);
+    color: white;
+}
+
 @media (min-width:500px){
 
     .img-welcomeInfo{

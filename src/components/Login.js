@@ -14,7 +14,7 @@ const Login = () => {
     const submit = e => {
         e.preventDefault();
         dispatch({ 
-            type: "GET_USERNAME",
+            type: "SET_USERNAME",
             payload: userName  
         });
         setUserName("");
