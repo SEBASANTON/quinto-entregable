@@ -24,6 +24,7 @@
     height: 9rem;
     border-radius: 10px;
     text-align: center;
+    background-color: rgb(233, 220, 203);
 
 }
 .theme>h1{
@@ -36,6 +37,8 @@
     padding: 0.5rem 1.5rem;
     height: 10.7rem;
     border-radius: 10px;
+    background-color: rgb(233, 220, 203);
+
 }
 
 .switch{

@@ -4,6 +4,7 @@ import "../styles/config.css";
 
 const Config = () => {
   return (
+    <div className="config-body">
     <div className="config">
       <Link to={'/pokedex'} className="back">
         <i className="fa-solid fa-arrow-left"></i>
@@ -31,6 +32,7 @@ const Config = () => {
 
         </div>
       </div>
+    </div>
     </div>
   );
 };

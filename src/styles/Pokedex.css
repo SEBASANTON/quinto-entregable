@@ -21,6 +21,7 @@
     margin: 1rem 0;
     color: rgb(85, 85, 84);
 }
+
 .input-container>button{
     height: 30px;
     width: 25px;
@@ -78,8 +79,8 @@
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     position: fixed;
-    right: 10px;
-    bottom: 90px;
+    right: 1vw;
+    bottom: 1.2rem;
 }
 .img-config:hover{
     width: 55px;
@@ -88,8 +89,8 @@
 .img-output{
     width: 45px;
     position: fixed;
-    right: 10px;
-    bottom: 30px;
+    right: 1vw;
+    top: 1rem;
 }
 .img-output:hover{
     width: 50px;
