@@ -135,6 +135,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 .responsive-movements>p{
@@ -165,6 +166,7 @@
 .pokeInfo{
     opacity: 10;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .back-pokeball{
