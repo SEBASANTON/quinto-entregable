@@ -97,7 +97,7 @@
     transform-origin: 50% 50%;
     position: fixed;
     right: 1vw;
-    bottom: 4rem;
+    bottom: 9rem;
     z-index: 2;
 }
 .img-config:hover{
@@ -108,7 +108,7 @@
     width: 45px;
     position: fixed;
     right: 1vw;
-    top: 1rem;
+    bottom: 4rem;
     z-index: 2;
 }
 .img-output:hover{
@@ -164,7 +164,11 @@
         font-size: 18px;
     }
     .img-output{
-        top: 2.5rem;
+        bottom: 4rem;
+        right: 2.1vw;
+    }
+    .img-config{
+        right: 2.2vw;
     }
     .responsive-buttons>button .active{
         background-color: aqua;
