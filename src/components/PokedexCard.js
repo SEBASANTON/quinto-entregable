@@ -80,8 +80,8 @@ const PokedexCard = ({pokemonUrl}) => {
 /* 868A88 */
 
     return (
-    <div className="card" style={{background:pokeColor}}>
         <Link to={`/pokedex/${pokemon.id}`} className="link-card">
+        <div className="card" style={{background:pokeColor}}>
             <h2>{pokemon.name}</h2>
             <hr />
             <img src={pokemon.sprites?.other["official-artwork"].front_default} alt="" />
@@ -102,8 +102,8 @@ const PokedexCard = ({pokemonUrl}) => {
                 <p className="p-ul"><b>Speed</b><br/>{pokemon.stats?.[5]?.base_stat}</p>
             </div>
 
+        </div>
         </Link> 
-    </div>
     );
 };
 

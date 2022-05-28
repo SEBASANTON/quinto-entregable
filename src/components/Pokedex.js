@@ -10,6 +10,9 @@ import output from "../assets/cerrar-sesion.png";
 
 const Pokedex = () => {
   const userName = useSelector((state) => state.userName);
+  const theme = useSelector((state) => state.theme);
+  const pages = useSelector((state) => state.pages);
+
   const navigate = useNavigate();
 
   const [pokemons, setPokemons] = useState([]);
@@ -41,7 +44,11 @@ const Pokedex = () => {
   };
 
   const [page, setPage] = useState(1);
-  const itemsNumber = 8;
+  const [pageNumberLimit, setPageNumberLimit] = useState(5);
+  const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
+  const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
+
+  const itemsNumber = pages;
   const lastIndex = page * itemsNumber;
   const firstIndex = lastIndex - itemsNumber;
   const pokemonPaginated = pokemons.slice(firstIndex, lastIndex);
@@ -50,12 +57,53 @@ const Pokedex = () => {
   for (let i = 1; i <= totalPages; i++) {
     pagesNumbers.push(i);
   }
+  
+  const handleNextbtn = () => {
+    setPage(page + 1);
 
-  const theme = useSelector((state) => state.theme);
+    if (page +1 > maxPageNumberLimit){
+      setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
+      setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit)
+    }
+  }
+  const handlePrevbtn = () => {
+    setPage(page - 1);
 
+    if ((page -1) % pageNumberLimit == 0){
+      setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
+      setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit)
+    }
+  }
+
+  let pageIncrementBtn = null;
+  if(pagesNumbers.length>maxPageNumberLimit){
+    pageIncrementBtn = <button onClick={handleNextbtn} disabled={page >= totalPages}> &hellip;</button>
+  }
+  let pageDecrementBtn = null;
+  if(pagesNumbers.length>=maxPageNumberLimit){
+    pageDecrementBtn = <button onClick={handlePrevbtn} disabled={page <= pageNumberLimit} > &hellip;</button>
+  }
+
+
+  const renderNumber = pagesNumbers.map((number) => {
+  if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
+  return(
+    <button
+      onClick={() => setPage(number)}
+      key={number}
+      className={page == number ? "activeButton" : ""}>
+      {number}
+      </button>
+  );
+  }else{
+    return null
+  }
+  }
+    
+)
 
   return (
-    <div className=/* "pokedex"  */{`pokedex ${theme ? "open" : ""} `}>
+    <div className={`pokedex ${theme ? "open" : ""} `}>
       <img className="img-welcome" src={fondo} alt="" />
 
       <h1>Pokedex</h1>
@@ -72,7 +120,10 @@ const Pokedex = () => {
 
       {show ? (
         <div className="select">
-          <select onChange={handleType} className="options">
+          <select onChange={handleType} className="options" defaultValue={1}>
+            <option value="1" disabled hidden>
+              Select type
+            </option>
             {types.map((type) => (
               <option key={type.url} value={type.url}>
                 {type.name}
@@ -95,7 +146,7 @@ const Pokedex = () => {
           </button>
         </form>
       )}
-      
+
       <div className="Card-responsive">
         {pokemonPaginated.map((pokemon) => (
           <PokedexCard
@@ -118,15 +169,35 @@ const Pokedex = () => {
       </div>
 
       <div className="responsive-buttons">
-        <button onClick={() => setPage(page - 1)} disabled={page <= 1}>
+        <button onClick={handlePrevbtn} disabled={page <= 1}>
           <i className="fa-solid fa-backward"></i>
         </button>
-        {pagesNumbers.map((page) => (
-          <button onClick={() => setPage(page)} key={page}>
-            {page}
-          </button>
-        ))}
-        <button onClick={() => setPage(page + 1)} disabled={page >= totalPages}>
+        {/* {pagesNumbers.map((number) => {
+            {
+              (number<maxPageNumberLimit+1 && number > minPageNumberLimit) ? (
+              <button
+              onClick={() => setPage(number)}
+              key={number}
+              className={page == number ? "activeButton" : ""}>
+              {number}
+              </button>
+            ):(
+              <div key={number}>
+              <p>Holaa</p>
+              </div>
+            )
+            }
+          } 
+        )} */}
+        
+        {pageDecrementBtn}
+        {renderNumber}
+        {pageIncrementBtn}
+
+        <button
+          onClick={handleNextbtn}
+          disabled={page >= totalPages}
+        >
           <i className="fa-solid fa-forward"></i>
         </button>
       </div>

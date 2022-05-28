@@ -3,6 +3,7 @@ import { actions } from "./actions";
 const INITIAL_STATE = {
     userName: "",
     theme: false,
+    pages: 8,
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -19,7 +20,11 @@ const reducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 theme: action.payload
             }
-            
+        case actions.setPages:
+            return{
+                ...state,
+                pages: action.payload
+            }
 
         default:
 	        return state;

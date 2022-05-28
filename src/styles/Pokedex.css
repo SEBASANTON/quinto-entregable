@@ -38,10 +38,12 @@
     color: rgb(85, 85, 84);
 }
 
+
+
 .options{
     border-radius: 20px;
     height: 30px;
-    width: 120px;
+    width: 160px;
     padding: 0 5px;
     box-shadow: 3px 5px 8px 4px rgb(153, 153, 153);
     text-align: center;
@@ -63,19 +65,30 @@
     flex-wrap: wrap;
 }
 .responsive-buttons>button{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 10px;
     margin: 1rem 0.3rem;
     border:transparent;
-    background-color: rgb(228, 94, 17);
-    font-size: 18px;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    color: rgb(0, 0, 0);
 }
 
 .responsive-buttons>button:disabled{
     display: none;
 }
+.responsive-buttons>button:hover{
+    background-color: rgb(228, 94, 17);
+    font-size: 18px;
+    color: white;
+}
+
+.responsive-buttons .activeButton{
+    background-color: rgb(228, 94, 17);
+    color: white;
+}
+
 .img-config{
     width: 50px;
     -webkit-animation: 3s rotate linear infinite;
@@ -84,7 +97,7 @@
     transform-origin: 50% 50%;
     position: fixed;
     right: 1vw;
-    bottom: 1.2rem;
+    bottom: 4rem;
     z-index: 2;
 }
 .img-config:hover{
@@ -148,15 +161,16 @@
         margin: 1rem 0.3rem;
         border:transparent;
         background-color: white;
-        font-size: 16px;
-    }
-    .responsive-buttons>button:hover{
-        background-color: rgb(228, 94, 17);
         font-size: 18px;
-        color: white;
     }
     .img-output{
         top: 2.5rem;
     }
+    .responsive-buttons>button .active{
+        background-color: aqua;
+        font-weight: bold;
+    }
+    
+
     
 }
