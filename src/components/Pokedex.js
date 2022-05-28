@@ -44,7 +44,7 @@ const Pokedex = () => {
   };
 
   const [page, setPage] = useState(1);
-  const [pageNumberLimit, setPageNumberLimit] = useState(5);
+  const pageNumberLimit = 5;
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
@@ -69,7 +69,7 @@ const Pokedex = () => {
   const handlePrevbtn = () => {
     setPage(page - 1);
 
-    if ((page -1) % pageNumberLimit == 0){
+    if ((page -1) % pageNumberLimit === 0){
       setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
       setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit)
     }
@@ -91,7 +91,7 @@ const Pokedex = () => {
     <button
       onClick={() => setPage(number)}
       key={number}
-      className={page == number ? "activeButton" : ""}>
+      className={page === number ? "activeButton" : ""}>
       {number}
       </button>
   );

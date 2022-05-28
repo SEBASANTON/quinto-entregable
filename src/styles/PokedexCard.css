@@ -14,12 +14,15 @@ z-index: 1;
     z-index: 1;
 }
 
-.card:hover h2{
+.card:hover h2,hr {
     color: antiquewhite;
 }
-
+.card:hover hr {
+    background-color: rgba(250, 235, 215, 0.863);
+    
+}
 .card:hover {
-    box-shadow: 3px 5px 8px 4px rgb(153, 153, 153);
+    box-shadow: 2px 2px 7px 6px rgb(128, 128, 128);
 }
 
 .card>h2{
