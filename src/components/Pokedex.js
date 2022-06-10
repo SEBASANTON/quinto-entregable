@@ -145,7 +145,7 @@ const Pokedex = () => {
                     <Link to={'/'} className="link-output">
                         <hr />
                         <i className="fa-solid fa-arrow-right-from-bracket"></i>
-                        <b>OUTPUT</b>
+                        <b>EXIT</b>
                         <hr />
                     </Link>
                 </div>
