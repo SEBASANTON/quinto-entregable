@@ -2,11 +2,53 @@
     margin-top: -1rem;
     padding-top: 1rem;
 }
-.pokedex>h1{
+.responsive-menu{
+    display: flex;
+    justify-content: space-between ;
+    background: linear-gradient(0.92deg, #eee2e2 0.92%, #f8ece3 47.96%, #fde9d8 99.08%) ;
+    position: fixed;
+    width: 100vw;
+    height: 75px;
+    z-index: 2;
+    box-shadow: 3px 4px 16px 2px rgb(153, 153, 153);
+}
+
+.title-responsive>h1{
     text-align: left;
-    margin: 1rem 2rem;
+    margin: 0.5rem 2rem;
     font-family: 'Kanit', sans-serif;
     font-size: 35px;
+    color: black;
+}
+
+.icon-responsive>button{
+    font-size: 25px;
+    margin: 1rem 2rem;
+    border: transparent;
+    background-color: transparent;
+    color: black;
+
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+    padding: 1.5rem;
+    width: 290px;
+    transition: 1s;
+    transform: translateX(290px);
+    overflow: auto;
+    text-align: left;
+    background-image: url('../assets/pokebola3.gif');
+    z-index: 2;
+}
+.menu.input{
+    transform: translateX(0);
+    box-shadow: 3px 4px 16px 2px rgb(153, 153, 153);
+    color: black;
 }
 
 .pokedex>p{
@@ -15,6 +57,7 @@
     font-size: 20px;
     text-align: justify;
     position: relative;
+    margin-top: 90px;
 }
 
 .input-container>input{
@@ -37,8 +80,6 @@
     background-color: white;
     color: rgb(85, 85, 84);
 }
-
-
 
 .options{
     border-radius: 20px;
@@ -89,16 +130,55 @@
     color: white;
 }
 
+.exit-icon{
+    text-align: right;
+}
+
+.exit-icon>button{
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 0);
+    border: transparent;
+}
+
+
+.link-config{
+    margin: 1rem;
+    color: black;
+    text-decoration: none;
+    font-size: 21px;
+
+}
+.link-output{
+    margin: 1rem;
+    color: black;
+    text-decoration: none;
+    font-size: 21px;
+
+}
+.config-block{
+    margin-bottom: -1.7rem;
+}
+.link-config>b{
+    margin-left: 0.5rem;
+}
+.link-output>b{
+    margin-left: 0.8rem;
+}
+.pokebola2{
+    width: 400px;
+    margin: 0 auto;
+    margin-left: -5rem;
+    margin-top: -1rem;
+}
+
 .img-config{
-    width: 50px;
+    width: 40px;
     -webkit-animation: 3s rotate linear infinite;
     animation: 3s rotate linear infinite;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    position: fixed;
-    right: 1vw;
-    bottom: 9rem;
-    z-index: 2;
+    display: none;
+
 }
 .img-config:hover{
     width: 55px;
@@ -106,10 +186,8 @@
 
 .img-output{
     width: 45px;
-    position: fixed;
-    right: 1vw;
-    bottom: 4rem;
-    z-index: 2;
+    display: none;
+
 }
 .img-output:hover{
     width: 50px;
@@ -140,15 +218,62 @@
     background-color: rgb(51, 51, 51);
     color: white;
 }
+.open>.responsive-menu{
+    background: rgb(51, 51, 51);
+    color: white;
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22);
+}
+.open>.responsive-menu>.title-responsive>h1{
+    color: white;
+}
+.open>.responsive-menu>.icon-responsive>button{
+    color: white;
+}
+
+.open>.menu{
+    background: rgb(51, 51, 51);
+    box-shadow: 3px 5px 8px 4px rgb(22, 22, 22);
+}
+.open>.menu>.exit-icon>button{
+    color: white;
+}
+.open>.menu>.config-block>.link-config{
+    color: white;
+}
+.open>.menu>.config-block>.link-config>hr{
+    background-color: white;
+    box-shadow: 3px 2px 8px 2px rgb(22, 22, 22);
+}
+.open>.menu>.output-block>.link-output{
+    color: white;
+}
+.open>.menu>.output-block>.link-output>hr{
+    background-color: white;
+    box-shadow: 3px 2px 8px 3px rgb(22, 22, 22);
+}
+.open>.menu>img{
+    display: none;
+}
 
 
 @media (min-width:1000px){
-    .pokedex>h1{
+    .responsive-menu{ 
+        background:rgba(255, 255, 255, 0) ;
+        position:relative;
+        box-shadow: 0px 0px 0px 0px ;
+
+    }
+    .title-responsive>h1{
+        text-align: left;
+        margin: 1rem 2rem;
+        font-family: 'Kanit', sans-serif;
+        font-size: 35px;
         margin-left: 6rem ;
     }
 
     .pokedex>p{
         margin-left: 10rem;
+        margin-top: 0.5rem;
     }
     .Card-responsive{
         margin: 0 3rem;
@@ -164,17 +289,36 @@
         font-size: 18px;
     }
     .img-output{
-        bottom: 4rem;
-        right: 2.1vw;
+        display: block;
+        width: 45px;
+        position: fixed;
+        z-index: 2;
+        top: 2.5rem;
+        right: 2.8vw;
+
+
     }
     .img-config{
-        right: 2.2vw;
+        display: block;
+        width: 50px;
+        -webkit-animation: 3s rotate linear infinite;
+        animation: 3s rotate linear infinite;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        position: fixed;
+        bottom: 3rem;
+        z-index: 2;
+        right: 2.7vw;
     }
-    .responsive-buttons>button .active{
-        background-color: aqua;
-        font-weight: bold;
+    .icon-responsive{
+        display: none;
+    }
+    .open>.responsive-menu{
+        background: rgba(0, 0, 0, 0);
+        width: 400px;
+        color: white;
+        box-shadow: 0px 0px 0px 0px rgb(22, 22, 22);
     }
     
-
     
 }

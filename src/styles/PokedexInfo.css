@@ -181,7 +181,7 @@
 /*-------MODO OSCURO--------------*/
 
 .dark>.resposive-info>.first-info>.one-info{
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(40, 43, 43);
     box-shadow: 3px 5px 8px 4px rgb(36, 36, 36, 0.5);
     color: white;
 }
